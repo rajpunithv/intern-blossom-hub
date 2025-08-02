@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Intern Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Background & Surface Colors */
+    --background: 249 250 251 1; /* Soft gray-50 */
+    --foreground: 30 41 59 1; /* Slate-700 */
+    --surface: 255 255 255 1; /* Pure white */
+    --surface-secondary: 248 250 252 1; /* Slate-50 */
+
+    /* Card & Overlay Colors */
+    --card: 255 255 255 1;
+    --card-foreground: 30 41 59 1;
+    --card-border: 226 232 240 1; /* Slate-200 */
+
+    --popover: 255 255 255 1;
+    --popover-foreground: 30 41 59 1;
+
+    /* Brand Colors - Modern Purple/Blue Gradient */
+    --primary: 239 68 68 1; /* Red-500 as primary */
+    --primary-light: 248 113 113 1; /* Red-400 */
+    --primary-dark: 220 38 38 1; /* Red-600 */
+    --primary-foreground: 255 255 255 1;
+
+    --secondary: 99 102 241 1; /* Indigo-500 */
+    --secondary-light: 129 140 248 1; /* Indigo-400 */
+    --secondary-foreground: 255 255 255 1;
+
+    --accent: 168 85 247 1; /* Purple-500 */
+    --accent-light: 196 181 253 1; /* Purple-300 */
+    --accent-foreground: 255 255 255 1;
+
+    /* Semantic Colors */
+    --success: 34 197 94 1; /* Green-500 */
+    --success-light: 74 222 128 1; /* Green-400 */
+    --warning: 245 158 11 1; /* Amber-500 */
+    --warning-light: 251 191 36 1; /* Amber-400 */
+    --destructive: 239 68 68 1; /* Red-500 */
+    --destructive-foreground: 255 255 255 1;
+
+    /* Neutral Colors */
+    --muted: 241 245 249 1; /* Slate-100 */
+    --muted-foreground: 100 116 139 1; /* Slate-500 */
+    --border: 226 232 240 1; /* Slate-200 */
+    --input: 226 232 240 1;
+    --ring: 239 68 68 1;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(239 68 68) 0%, hsl(99 102 241) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(99 102 241) 0%, hsl(168 85 247) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(168 85 247) 0%, hsl(236 72 153) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(255 255 255) 0%, hsl(248 250 252) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(239 68 68 / 0.1) 0%, hsl(99 102 241 / 0.1) 50%, hsl(168 85 247 / 0.1) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0 0 / 0.1), 0 2px 4px -2px hsl(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0 0 / 0.1), 0 4px 6px -4px hsl(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0 0 / 0.1), 0 8px 10px -6px hsl(0 0 0 / 0.1);
+    --shadow-glow: 0 0 20px hsl(239 68 68 / 0.3);
+    --shadow-glow-secondary: 0 0 20px hsl(99 102 241 / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Hero Button Variant */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground 
+           shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
+           px-8 py-3 rounded-xl font-semibold text-lg;
+  }
+
+  /* Glass Effect Cards */
+  .card-glass {
+    @apply bg-surface/80 backdrop-blur-lg border border-border/50 
+           shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Stats Card */
+  .stats-card {
+    @apply bg-gradient-to-br from-surface to-surface-secondary 
+           border border-border rounded-2xl p-6 shadow-md 
+           hover:shadow-lg transition-all duration-300;
+  }
+
+  /* Achievement Badge */
+  .achievement-badge {
+    @apply bg-gradient-to-r from-accent to-secondary 
+           text-accent-foreground px-4 py-2 rounded-full 
+           text-sm font-semibold shadow-md;
+  }
+}
